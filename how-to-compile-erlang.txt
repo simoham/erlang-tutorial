@@ -1,0 +1,10 @@
+mkdir -p /opt/otp-28.5
+./configure --prefix=/opt/otp-28.5/
+time make -j4
+make install
+
+export PATH=$PATH:/opt/otp-28.5/bin
+bash
+
+wget https://s3.amazonaws.com/rebar3/rebar3
+mv rebar3 /usr/sbin/ && chmod a+x /usr/sbin/rebar3
